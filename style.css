@@ -1,0 +1,81 @@
+/* Element Styling */
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 19px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+/* Class Styling */
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+
+    background-color: #201B1F;
+    border-radius: 10px;
+
+}
+
+.avatar {
+    width: 35%;
+    border-right: 4px solid #A69E92;
+    border-bottom: 4px solid #A69E92;
+    border-bottom-right-radius: 5px;
+}
+
+.personal-info {
+    text-align: center;
+    margin: auto;
+    color: #A69E92;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Animation & hovering effects */
+
+@keyframes highlightText {
+    from {
+        color: #A69E92;
+    }
+    to {
+        color: #E4E4E6;
+        text-shadow: 0 0 3px #E4E4E6;
+    }
+}
+
+.text-focus:hover {
+    animation-name: highlightText;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes highlightImg {
+    from {
+        border-right: 4px solid #A69E92;
+        border-bottom: 4px solid #A69E92;
+    }
+    to {
+        border-right: 4px solid #E4E4E6;
+        border-bottom: 4px solid #E4E4E6;
+        box-shadow: 0 0 3px #E4E4E6;
+    }
+}
+
+.box-focus:hover {
+    animation-name: highlightImg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
