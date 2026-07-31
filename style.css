@@ -1,4 +1,11 @@
 /* Element Styling */
+:root {
+    --card-bg: #201B1F;
+    --avatar-border: #A69E92;
+    --text-color: #A69E92;
+    --highlited-text-color: #E4E4E6;
+    --highlited-avatar-border: #E4E4E6;
+}
 
 body {
     box-sizing: border-box;
@@ -25,22 +32,22 @@ h2 {
     margin: 0 auto;
     padding: 20px;
 
-    background-color: #201B1F;
+    background-color: var(--card-bg);
     border-radius: 10px;
 
 }
 
 .avatar {
     width: 35%;
-    border-right: 4px solid #A69E92;
-    border-bottom: 4px solid #A69E92;
+    border-right: 4px solid var(--avatar-border);
+    border-bottom: 4px solid var(--avatar-border);
     border-bottom-right-radius: 5px;
 }
 
 .personal-info {
     text-align: center;
     margin: auto;
-    color: #A69E92;
+    color: var(--text-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -48,11 +55,11 @@ h2 {
 
 @keyframes highlightText {
     from {
-        color: #A69E92;
+        color: var(--text-color);
     }
     to {
-        color: #E4E4E6;
-        text-shadow: 0 0 3px #E4E4E6;
+        color: var(--highlited-text-color);
+        text-shadow: 0 0 3px var(--highlited-text-color);
     }
 }
 
@@ -64,13 +71,13 @@ h2 {
 
 @keyframes highlightImg {
     from {
-        border-right: 4px solid #A69E92;
-        border-bottom: 4px solid #A69E92;
+        border-right: 4px solid ;
+        border-bottom: 4px solid var(--avatar-border);
     }
     to {
-        border-right: 4px solid #E4E4E6;
-        border-bottom: 4px solid #E4E4E6;
-        box-shadow: 0 0 3px #E4E4E6;
+        border-right: 4px solid var(--highlited-text-color);
+        border-bottom: 4px solid var(--highlited-text-color);
+        box-shadow: 0 0 3px var(--highlited-text-color);
     }
 }
 
